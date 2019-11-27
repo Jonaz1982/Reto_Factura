@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::resource('countries', 'CountriesController');
+
+Route::resource('invoices', 'InvoicesController');
