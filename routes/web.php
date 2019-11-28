@@ -18,3 +18,7 @@ Route::get('/', function () {
 Route::resource('countries', 'CountriesController');
 
 Route::resource('invoices', 'InvoicesController');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
