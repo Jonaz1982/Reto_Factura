@@ -20,9 +20,11 @@ Route::resource('invoices', 'InvoicesController');
 
 Route::group(['middleware' => 'auth'], function() {
     Route::resource('users', 'UsersController');
+    Route::resource('clients', 'ClientController');
 });
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
 

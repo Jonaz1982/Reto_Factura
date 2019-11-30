@@ -7,8 +7,10 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">
-                    Usuarios
-                    <a href='{{ route('users.create') }}' class='btn btn-success btn-sm'>Nuevo Usuario</a>
+                <h1>
+                    Lista de Usuarios
+                </h1>
+                    <a href='{{ route('users.create') }}' class='btn btn-success btn-sm float-right'>Añadir un nuevo usuario</a>
                 </div>
                 <div class="card-body">
                     <table class="table table-light">
@@ -28,7 +30,7 @@
                                 <td>{{ $user->last_name }}</td>
                                 <td>{{ $user->email }}</td>
                                 <td>
-                                    <a href="{{ route('users.edit', ['user' => $user->id]) }}"" class='btn btn-info'>Editar</a>
+                                    <a href="{{ route('users.edit', ['user' => $user->id]) }}" class='btn btn-info'>Editar</a>
                                 </td>
                             </tr>
 
