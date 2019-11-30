@@ -16,9 +16,18 @@ Route::get('/', function () {
 });
 
 Route::resource('countries', 'CountriesController');
-
 Route::resource('invoices', 'InvoicesController');
 
+<<<<<<< Updated upstream
+=======
+
+Route::group(['middleware' => 'auth'], function() {
+    Route::resource('users', 'UsersController');
+});
+
+
+
+>>>>>>> Stashed changes
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
