@@ -26,8 +26,7 @@
                         </div>
 
                         <div class="form-group row">
-<<<<<<< Updated upstream
-=======
+
                             <label for="last_name" class="col-md-4 col-form-label text-md-right">{{ __('last_Name') }}</label>
 
                             <div class="col-md-6">
@@ -43,7 +42,7 @@
 
 
                         <div class="form-group row">
->>>>>>> Stashed changes
+
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 
                             <div class="col-md-6">
