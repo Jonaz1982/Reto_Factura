@@ -18,3 +18,12 @@ Route::get('/', function () {
 Route::resource('countries', 'CountriesController');
 
 Route::resource('invoices', 'InvoicesController');
+
+Route::group(['middleware' => 'auth'], function() {
+    Route::resource('users', 'UsersController');
+});
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+

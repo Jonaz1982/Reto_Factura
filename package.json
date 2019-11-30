@@ -15,7 +15,19 @@
         "laravel-mix": "^4.0.7",
         "lodash": "^4.17.13",
         "resolve-url-loader": "^2.3.1",
+<<<<<<< Updated upstream
         "sass": "^1.15.2",
         "sass-loader": "^7.1.0"
+=======
+<<<<<<< Updated upstream
+        "sass": "^1.20.1",
+        "sass-loader": "7.*",
+        "vue": "^2.5.17",
+=======
+        "sass": "^1.15.2",
+        "sass-loader": "^7.1.0",
+>>>>>>> Stashed changes
+        "vue-template-compiler": "^2.6.10"
+>>>>>>> Stashed changes
     }
 }
