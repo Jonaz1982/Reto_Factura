@@ -16,7 +16,6 @@ Route::get('/', function () {
 });
 
 Route::resource('countries', 'CountriesController');
-
 Route::resource('invoices', 'InvoicesController');
 
 Route::group(['middleware' => 'auth'], function() {

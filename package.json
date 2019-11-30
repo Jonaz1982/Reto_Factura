@@ -11,10 +11,14 @@
     },
     "devDependencies": {
         "axios": "^0.19",
+        "bootstrap": "^4.0.0",
         "cross-env": "^5.1",
+        "jquery": "^3.2",
         "laravel-mix": "^4.0.7",
         "lodash": "^4.17.13",
+        "popper.js": "^1.12",
         "resolve-url-loader": "^2.3.1",
+<<<<<<< HEAD
 <<<<<<< Updated upstream
         "sass": "^1.15.2",
         "sass-loader": "^7.1.0"
@@ -29,5 +33,11 @@
 >>>>>>> Stashed changes
         "vue-template-compiler": "^2.6.10"
 >>>>>>> Stashed changes
+=======
+        "sass": "^1.20.1",
+        "sass-loader": "7.*",
+        "vue": "^2.5.17",
+        "vue-template-compiler": "^2.6.10"
+>>>>>>> 7d106f97de0a44507dd0a61a9a50b574385b3063
     }
 }
