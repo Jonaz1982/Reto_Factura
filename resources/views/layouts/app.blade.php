@@ -50,10 +50,16 @@
                             @endif
                         @else
                             <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('users.index') }}">{{ __('Usuario') }}</a>
+                                    <a class="nav-link" href="{{ route('users.index') }}">{{ __('User') }}</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('clients.index') }}">{{ __('Clientes') }}</a>
+                                    <a class="nav-link" href="{{ route('clients.index') }}">{{ __('Clients') }}</a>
+                                </li>
+                                 <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('products.index') }}">{{ __('Products') }}</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('invoices.index') }}">{{ __('Invoice') }}</a>
                                 </li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>

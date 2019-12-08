@@ -1,7 +1,7 @@
 @extends('app')
 @section('content')
     <div class="card">
-        <div class="card-header">Gestión de facturas</div>
+        <div class="card-header">Invoice Management</div>
         <table class="table table-sm table-striped">
             <thead>
             <tr>

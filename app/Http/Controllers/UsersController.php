@@ -49,7 +49,7 @@ class UsersController extends Controller
             'password' => bcrypt('secret')
         ]);
 
-        return redirect()->route('users.index');
+        return redirect()->route('users.index')->withSuccess('Ha creado el cliente');
 
     }
 
@@ -61,7 +61,7 @@ class UsersController extends Controller
      */
     public function show(User $user)
     {
-        //
+        return view('users.show')->withUser($user);
     }
 
     /**
@@ -72,7 +72,8 @@ class UsersController extends Controller
      */
     public function edit(User $user)
     {
-        dd($user);
+        
+        return view('users.edit')->withUser($user);
     }
 
     /**
@@ -84,7 +85,16 @@ class UsersController extends Controller
      */
     public function update(Request $request, User $user)
     {
-        //
+        $data = $request->validate([
+            'name' => 'required',
+            'last_name' => 'required',
+            'email' => 'required|unique:users,id,'.$user->id
+        ]);
+
+        $user->update($data);
+
+        return redirect()->route('users.index')->withSuccess('Has actualizado al usuario ¡¡¡¡');
+
     }
 
     /**
@@ -95,6 +105,7 @@ class UsersController extends Controller
      */
     public function destroy(User $user)
     {
-        //
+        $user->delete();
+        return redirect()->route('users.index')->withSuccess('Has eliminado al Usuario');
     }
 }

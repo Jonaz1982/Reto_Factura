@@ -4,13 +4,13 @@
 
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-12">
+        <div class="col-md-8">
             <div class="card">
                 <div class="card-header">
                 <h1>
-                    Client List
+                    Product List
                 </h1>
-                    <a href='{{ route('clients.create') }}' class='btn btn-success btn-warning float-right'>Añadir un nuevo cliente</a>
+                    <a href='{{ route('products.create') }}' class='btn btn-success btn-warning float-right'>Añadir un nuevo producto</a>
                 </div>
                 <div class="card-body">
                     @if (session('success'))
@@ -21,26 +21,26 @@
                     <table class="table table-light">
                         <thead>
                             <tr>
-                                <th>Razon Social</th>
-                                <th>Nit</th>
-                                <th>Direccion</th>
+                                <th>Code</th>
+                                <th>Name</th>
+                                <th>Price</th>
                                 <th>Accion</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($clients as $client)
+                            @foreach($products as $product)
 
                             <tr>
-                                <td>{{ $client->nit}}</td>
-                                <td>{{ $client->social_reason}}</td>
-                                <td>{{ $client->address}}</td>
+                                <td>{{ $product->code}}</td>
+                                <td>{{ $product->name}}</td>
+                                <td>{{ $product->price}}</td>
                                 <td>
-                                    <a href="{{ route('clients.edit', ['client' => $client->id]) }} " class='btn btn-info'>Editar</a>
-                                    <a href="{{ route('clients.show', ['client' => $client->id]) }} " class='btn btn-success'>Mostar</a>
+                                    <a href="{{ route('products.edit', ['product' => $product->id]) }} " class='btn btn-info'>Editar</a>
+                                    <a href="{{ route('products.show', ['product' => $product->id]) }} " class='btn btn-success'>Mostar</a>
 
                                     <a class='btn btn-danger'
                                         onClick="
-                                            document.getElementById('delete-form').action ='{{route('clients.destroy',['client'=> $client->id]) }}'
+                                            document.getElementById('delete-form').action ='{{route('products.destroy',['product'=> $product->id]) }}'
                                             document.getElementById('delete-form').submit()
                                         
                                         "

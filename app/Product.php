@@ -6,8 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
-    public function invoices()
-    {
-        return $this->belongsToMany(Invoice::class);
-    }
+    protected $fillable = ['code', 'name', 'price'];
 }

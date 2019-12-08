@@ -99,10 +99,16 @@
                             @endif
                         @else
                             <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('users.index') }}">{{ __('Usuario') }}</a>
+                                    <a class="nav-link" href="{{ route('users.index') }}">{{ __('User') }}</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('clients.index') }}">{{ __('Clientes') }}</a>
+                                    <a class="nav-link" href="{{ route('clients.index') }}">{{ __('Clients') }}</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('products.index') }}">{{ __('Product') }}</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('invoices.index') }}">{{ __('Invoice') }}</a>
                                 </li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -135,8 +141,8 @@
                 <div class="links">
                     <a href="{{ route('clients.index') }}">Customers</a>
                     <a href="{{ route('users.index') }}">Users</a>
-                    <a href="https://laravel-news.com">Product</a>
-                    <a href="https://blog.laravel.com">invoice</a>
+                    <a href="{{ route('products.index') }}">Product</a>
+                    <a href="{{ route('invoices.index') }}">invoice</a>
                     <a href="https://github.com/Jonaz1982/Reto_Factura">GitHub</a>
                 </div>
             </div>
