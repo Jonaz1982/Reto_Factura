@@ -71,7 +71,7 @@ class InvoicesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        return redirect()->route('invoices.index')->withSuccess('Has actualizado la factura ¡¡¡¡');
     }
 
     /**
@@ -82,6 +82,7 @@ class InvoicesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $invoices->delete();
+        return redirect()->route('invoices.index')->withSuccess('Has eliminado la factura');
     }
 }

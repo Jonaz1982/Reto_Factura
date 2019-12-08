@@ -61,7 +61,7 @@ class UsersController extends Controller
      */
     public function show(User $user)
     {
-        return view('users.show')->withClient($user);
+        return view('users.show')->withUser($user);
     }
 
     /**
@@ -72,7 +72,8 @@ class UsersController extends Controller
      */
     public function edit(User $user)
     {
-        return view('users.edit')->withClient($user);
+        
+        return view('users.edit')->withUser($user);
     }
 
     /**
@@ -85,9 +86,9 @@ class UsersController extends Controller
     public function update(Request $request, User $user)
     {
         $data = $request->validate([
-            'nit' => 'required',
-            'social_reason' => 'required',
-            'address' => 'required'
+            'name' => 'required',
+            'last_name' => 'required',
+            'email' => 'required|unique:users,id,'.$user->id
         ]);
 
         $user->update($data);

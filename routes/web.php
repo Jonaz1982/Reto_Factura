@@ -21,6 +21,8 @@ Route::resource('invoices', 'InvoicesController');
 Route::group(['middleware' => 'auth'], function() {
     Route::resource('users', 'UsersController');
     Route::resource('clients', 'ClientController');
+    Route::resource('products', 'ProductController');
+    Route::resource('invoices', 'InvoicesController');
 });
 
 Auth::routes();
