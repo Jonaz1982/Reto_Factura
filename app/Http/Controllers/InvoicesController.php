@@ -26,7 +26,7 @@ class InvoicesController extends Controller
      */
     public function create()
     {
-        //
+        return view('invoices.create');
     }
 
     /**
@@ -37,39 +37,39 @@ class InvoicesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return redirect()->route('invoices.index')->withSuccess('Ha creado La factura');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Invoice  $invoice
      * @return \Illuminate\Http\Response
      */
     public function show(Invoice $invoice)
     {
-        return view('invoices.show', compact('invoice'));
+        return view('invoices.show')->withUser($invoice);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Invoice  $invoice
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Invoice $invoice)
     {
-        //
+        return view('invoices.edit')->withUser($invoice);
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Invoice  $invoice
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Invoice $invoice)
     {
         return redirect()->route('invoices.index')->withSuccess('Has actualizado la factura ¡¡¡¡');
     }
@@ -77,12 +77,12 @@ class InvoicesController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Invoice  $invoice
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Invoice $invoice)
     {
-        $invoices->delete();
+        $invoice->delete();
         return redirect()->route('invoices.index')->withSuccess('Has eliminado la factura');
     }
 }
